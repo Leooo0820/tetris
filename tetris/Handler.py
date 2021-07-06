@@ -71,7 +71,7 @@ def rotate(shot, piece):
 def isDefeat(shot, piece):
     for y,x in getCellsAbsolutePosition(piece):
         if y>=0 :
-            if y<=1 and shot.status[y+1][x]==2:
+            if y<1 and shot.status[y+1][x]==2:
                 return True
         else:
             return False
